@@ -1,4 +1,4 @@
-# springboot-crud-restful-webservices
+# springboot-Async-crud-restful-webservices
 
 Tech Stack - Spring Boot, MySQL, JPA, Hibernate - Restful Async CRUD API implementation 
 
