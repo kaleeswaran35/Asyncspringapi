@@ -73,6 +73,7 @@ public class UserController {
     }
 
     // get user by id
+    @Async
     @GetMapping("/{id}")
     public Users getUserById(@PathVariable(value = "id") long userId) {
         return this.userRepository.findById(userId)
@@ -80,12 +81,14 @@ public class UserController {
     }
 
     // create user
+    @Async
     @PostMapping("/createuser")
     public Users createUser(@RequestBody Users user) {
         return this.userRepository.save(user);
     }
 
     // update user
+    @Async
     @PutMapping("/{id}")
     public Users updateUser(@RequestBody Users user, @PathVariable("id") long userId) {
         Users existingUser = this.userRepository.findById(userId)
@@ -97,6 +100,7 @@ public class UserController {
     }
 
     // delete user by id
+    @Async
     @DeleteMapping("/{id}")
     public ResponseEntity<Users> deleteUser(@PathVariable("id") long userId) {
         Users existingUser = this.userRepository.findById(userId)
