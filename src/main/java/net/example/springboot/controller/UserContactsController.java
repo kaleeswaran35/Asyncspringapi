@@ -29,11 +29,13 @@ public class UserContactsController {
     private UserContactsRepositoryServiceImpl userContactsRepositoryserviceimpl;
 
     // get all usersContacts
+    @Async
     @GetMapping("/getall")
     public List<UserContacts> getAllUsers() {
         return userContactsRepositoryserviceimpl.get();
     }
 
+    @Async
     @PostMapping("/createusercontacts")
     public  HttpStatus createUserContacts(@Validated @RequestBody UserContacts userContacts) {
         this.userContactsRepositoryserviceimpl.save(userContacts);
