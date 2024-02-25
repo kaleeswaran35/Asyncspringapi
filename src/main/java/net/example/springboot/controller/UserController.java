@@ -67,20 +67,9 @@ public class UserController {
         JsonNode responseObj1 = restTemplate.getForObject(localSlowServiceEndpointpost, JsonNode.class);
         System.out.println("responseObj1" + responseObj1);
         CompletableFuture response1 = CompletableFuture.completedFuture(responseObj1);
-
         String localSlowServiceEndpoint = "https://dummyjson.com/products/2";
-        JsonNode responseObj = restTemplate.getForObject(localSlowServiceEndpoint, JsonNode.class);
-        System.out.println("responseObj" + responseObj);
-        CompletableFuture response = CompletableFuture.completedFuture(responseObj);
-
-        ObjectMapper mapper = new ObjectMapper();
-        ArrayNode jsonArray = mapper.createArrayNode();
-
-        jsonArray.add(responseObj1);
-        jsonArray.add(responseObj);
-
-        System.out.println(jsonArray);
-        return CompletableFuture.completedFuture(jsonArray);
+        JsonNode responseObj = restTemplate.getForObject(localSlowServiceEndpoint, JsonNode.class);       
+        return  CompletableFuture response = CompletableFuture.completedFuture(responseObj);           
     }
 
     // get user by id
