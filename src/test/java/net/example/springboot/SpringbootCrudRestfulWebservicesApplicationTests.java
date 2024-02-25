@@ -26,16 +26,6 @@ class SpringbootCrudRestfulWebservicesApplicationTests {
 
     @Test
     public void getalluser() throws Exception {
-
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users")).andExpect(status().isOk());
-
     }
-//
-//    @Test
-//    public void contextLoads() {
-//        final ResponseEntity<Users[]> entity;
-//        entity = this.restTemplate.getForEntity("http://localhost:8080/api/users", Users[].class);
-//        assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-//    }
-
 }
