@@ -69,7 +69,7 @@ public class UserController {
         CompletableFuture response1 = CompletableFuture.completedFuture(responseObj1);
         String localSlowServiceEndpoint = "https://dummyjson.com/products/2";
         JsonNode responseObj = restTemplate.getForObject(localSlowServiceEndpoint, JsonNode.class);       
-        return  CompletableFuture response = CompletableFuture.completedFuture(responseObj);           
+        return  CompletableFuture response;           
     }
 
     // get user by id
